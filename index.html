@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title> Placement Prediction</title>
+</head>
+
+<body>
+    <h1>Placement Prediction</h1>
+    <form action="/predict" method="post">
+        <label for="gender">Gender:</label>
+        <input type="text" id="gender" name="gender" placeholder="e.g., male or female"><br><br>
+
+        <label for="class">Class:</label>
+        <input type="text" id="class" name="class" placeholder="e.g., group A, group B"><br><br>
+
+        <label for="course">Course:</label>
+        <input type="text" id="course" name="course" placeholder="e.g., mca"><br><br>
+
+        <label for="test_prep">Test Preparation Course:</label>
+        <input type="text" id="test_prep" name="test_prep" placeholder="e.g., none or completed"><br><br>
+
+        <label for="aptitude_score">Aptitude Score:</label>
+        <input type="text" id="aptitude_score" name="aptitude_score" placeholder="e.g., 70"><br><br>
+
+        <label for="coding_score">Coding Score:</label>
+        <input type="text" id="coding_score" name="coding_score" placeholder="e.g., 80"><br><br>
+
+        <label for="gd_score">Group Discussion Score:</label>
+        <input type="text" id="gd_score" name="gd_score" placeholder="e.g., 78"><br><br>
+
+        <input type="submit" value="Predict">
+    </form>
+    {% if prediction_text %}
+    <h2>{{ prediction_text }}</h2>
+    {% endif %}
+</body>
+
+</html>
